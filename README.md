@@ -8,12 +8,7 @@ joyceku@umich.edu
 ---
 This project explores nutritional patterns in recipes sourced from [food.com](https://www.food.com), with a focus on predicting calorie content and understanding how nutritional profiles vary across different cuisines. 
 
-### Question
-With the rising interest in health-conscious eating, a relevant question that may be asked is:
-
-**_How do factors such as type of cuisine, type of ingredients, nutritional information, and other relevant tags result in a higher calorie recipe?_** 
-
-This question matters because it can help consumers make more informed dietary choices, understand cultural differences in food composition, and potentially support healthier cooking decisions.
+With the rising interest in health-conscious eating, a relevant question that may be asked is: **How do factors such as type of cuisine, type of ingredients, nutritional information, and other relevant tags result in a higher calorie recipe?** This question matters because it can help consumers make more informed dietary choices, understand cultural differences in food composition, and potentially support healthier cooking decisions.
 
 To answer this, I used a subset of a raw dataset on the site posted after 2008 containing `recipes` and `interactions`. 
 

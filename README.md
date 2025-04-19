@@ -1,9 +1,16 @@
-# recipe-nutrition-analysis
-Using a recipe/rating dataset from food.com to analyze caloric trends and nutrition information.
-
-**Introduction**
+# Introduction
+---
 So this is my introduction
 
-**hello**
 
-# another-title
+# Data Cleaning and Exploratory Data Analysis
+---
+
+# Framing a Prediction Problem
+---
+
+# Baseline Model
+---
+
+# Final Model
+---

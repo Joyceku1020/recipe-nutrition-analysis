@@ -1,5 +1,5 @@
-title: "Nutritional Insights: Predicting Calories in Recipes"
-description: "An analysis on caloric trends and nutrition information from a recipe dataset from food.com.\n\nJoyce Ku\njoyceku@umich.edu"
+title: recipes-and-nutrition
+description: "An analysis on caloric trends and nutrition information from a recipe dataset from food.com."
 
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:

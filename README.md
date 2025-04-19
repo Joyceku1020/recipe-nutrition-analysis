@@ -1,6 +1,7 @@
 # Nutritional Insights: Predicting Calories in Recipes
 
-Joyce Ku | joyceku@umich.edu
+Joyce Ku
+joyceku@umich.edu
 
 ## Introduction
 ---

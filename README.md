@@ -82,7 +82,21 @@ The plot reveals that most recipes fall under 1,000 calories, with a noticeable 
 
 
 
-I displayed most common cuisine tags in recipes, without including overlapping cuisines. I removed the more general cuisine varieties. For example, I removed american because of the american subsection cuisines.  
+I also explored the most common cuisine tags in the recipes, excluding any overlapping categories. To keep the analysis more meaningful, I removed broad labels like "European," since they often contain more specific regional cuisines. On the other hand, I chose to keep "American" as a single category, combining its regional variations due to their overall similarity. The bar chart below shows the number of recipies per cuisine:
+
+
+<iframe
+ src="assets/recipes-per-cuisine.html"
+ width="1000"
+ height="400"
+ frameborder="0"
+ ></iframe>
+
+The bar chart shows American cuisine is by far the most common, with over 9,000 recipes which is more than three times the next most frequent cuisines. Italian and Mexican cuisines follow, with around 2,500 and 2,100 recipes respectively. Beyond these top three, the remaining cuisines appear at much lower but relatively similar frequencies, suggesting that while the dataset is diverse, it has a strong bias toward American-style recipes.
+
+
+
+
 
 ### Bivariate Analysis
 

@@ -74,7 +74,7 @@ I first examined the distribution of calories across all recipes. The histogram 
 <iframe
  src="assets/calorie-distribution.html"
  width="800"
- height="600"
+ height="400"
  frameborder="0"
  ></iframe>
 

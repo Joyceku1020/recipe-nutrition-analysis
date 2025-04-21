@@ -70,6 +70,19 @@ Below is a preview of the cleaned dataset sorted by average rating from high to 
 
 Since there were extreme outliers in the calories column, I decided to only analyze recipes with calories less than 2000.
 
+I first examined the distribution of calories across all recipes. The histogram below shows how calories are distributed:
+
+<iframe
+ src="assets/calories-distribution.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
+The plot reveals that most recipes fall under 1,000 calories, with a noticeable peak between 100 to 300 calories. The distribution is right-skewed, eamning there are more low-calorie recipes and fewer high-calorie ones, even after removing the extreme outliers. 
+
+
+
 I displayed most common cuisine tags in recipes, without including overlapping cuisines. I removed the more general cuisine varieties. For example, I removed american because of the american subsection cuisines.  
 
 ### Bivariate Analysis

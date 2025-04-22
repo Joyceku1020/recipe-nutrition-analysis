@@ -165,8 +165,36 @@ I didn’t perform imputation because the only column with missing data was avg_
 ## Framing a Prediction Problem
 ---
 
+The question I pose is: **Given a recipe's macronutrient profile (total fat, sugar, sodium, protein, saturated fat, carbohydrates), number of ingredients, and the recipe's cuisine type, what would be the predicted number of calories?**
+
+This is a **regression** problem because the target variable (calories) is continuous and numeric. At prediction time, which is before cooking begins, I will use:
+
+**Numeric features:**
+- Preparation data: `n_steps`, `n_ingredients`
+- Nutrition data: `total_fat`, `sugar`, `sodium`, `protein`, `saturated_fat`, `carbohydrates`
+
+**Categorical feature:**
+- Tag data: `cuisine`
+
+The goal is to learn how these inputs jointly predict the continuous outcome, `calories`.
+
+I will evaluate model performance using **Mean Squared Error (MSE)** This metric helps quantify the difference between the predicted calorie values and the actual calorie values across all recipes. Since the goal of the project is to predict the number of calories in a recipe based on a variety of features like nutritional information and recipe details, MSE gives us a clear indication of how well the model is performing in terms of accuracy.
+
+
 ## Baseline Model
 ---
+
+To build my baseline model, I used a linear regression pipeline that processes both numerical and categorical data. I first separated out the target variable, calories, and split the dataset into training and testing sets. All numeric features—like total fat, sugar, sodium, protein, saturated fat, carbohydrates, number of ingredients, and number of steps—were standardized so that the model could treat them equally regardless of scale. For the categorical feature, cuisine tags were one-hot encoded to ensure they could be used effectively in the regression model.
+
+Once the pipeline was set up, I trained the model on the training data and then evaluated its performance using **Mean Squared Error (MSE)**. This metric measures the average squared difference between predicted and actual calorie values, meaning larger mistakes have a bigger impact. MSE is helpful for capturing whether the model tends to miss the mark in extreme ways. The resulting MSE gives me a benchmark for how well a basic linear model can perform on this task, which I’ll use to judge more advanced models moving forward.
+
+`Baseline MSE: 816.06 calories^2`
+`Baseline R²: 0.9908`
+
+
+The baseline linear regression model achieved a Mean Squared Error (MSE) of 816.06 and an R² score of 0.9908 on the test set. The low MSE indicates that, on average, the model's predictions are very close to the actual calorie values, with relatively small errors when squared. This suggests that the model is effective at minimizing large deviations from true values, which is especially important when predicting nutritional metrics like calories.
+
+An R² score of 0.9908 means that the model is able to explain over 99% of the variance in the calorie data. This high value suggests a strong linear relationship between the input features—nutritional components, ingredient and step counts, and the cuisine type—and the target variable. While promising, such a high R² might also hint at potential overfitting or the presence of highly predictive features (like macronutrients) that dominate the prediction. These results set a strong baseline and will be helpful for evaluating the value of more complex models later in the process.
 
 ## Final Model
 ---

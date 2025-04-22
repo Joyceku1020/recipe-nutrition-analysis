@@ -82,7 +82,7 @@ The plot reveals that most recipes fall under 1,000 calories, with a noticeable 
 
 
 
-I also explored the most common cuisine tags in the recipes, excluding any overlapping categories. To keep the analysis more meaningful, I removed broad labels like "European," since they often contain more specific regional cuisines. On the other hand, I chose to keep "American" as a single category, combining its regional variations due to their overall similarity. The bar chart below shows the number of recipies per cuisine:
+I also explored the most common cuisine tags in the recipes, excluding any overlapping categories. I gathered all of the cuisines from the top 300 most used tags. To keep the analysis more meaningful, I removed broad labels like "European," since they often contain more specific regional cuisines. On the other hand, I chose to keep "American" as a single category, combining its regional variations due to their overall similarity. The bar chart below shows the number of recipies per cuisine:
 
 
 <iframe
@@ -95,10 +95,23 @@ I also explored the most common cuisine tags in the recipes, excluding any overl
 The bar chart shows American cuisine is by far the most common, with over 9,000 recipes which is more than three times the next most frequent cuisines. Italian and Mexican cuisines follow, with around 2,500 and 2,100 recipes respectively. Beyond these top three, the remaining cuisines appear at much lower but relatively similar frequencies, suggesting that while the dataset is diverse, it has a strong bias toward American-style recipes.
 
 
-
-
-
 ### Bivariate Analysis
+
+In addition to analyzing one variable at a time, I looked at relationships between two columns. Specifically, I grouped the data by cuisine and calculated the average for all of the nutrition metrics: calories, total fat, sugar, sodium, protein, saturated fat, and carbohydrates. These were then visualized using bar charts to help identify how different cuisines compare in terms of their typical nutritional profiles. This analysis was done to provide a more nuanced view of each cuisine's general nutritional characteristics and determine the health considerations of each cuisine. I decided to display the bar charts comparing the average values of calories, sodium, sugar, and protein.
+
+**Calories**: This chart shows that Thai, Italian, and French cuisines have the highest average calorie counts among all cuisines analyzed, while Canadian, Australian, and Indian cuisines tend to be the lowest. Interestingly, some commonly perceived "heavier" cuisines like American and Mexican fall closer to the middle of the range, rather than the top.
+
+
+<iframe
+ src="assets/calories-per-cuisine.html"
+ width="1000"
+ height="400"
+ frameborder="0"
+ ></iframe>
+
+
+
+
 
 
 ### Interesting Aggregates

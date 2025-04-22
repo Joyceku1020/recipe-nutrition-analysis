@@ -99,7 +99,7 @@ The bar chart shows American cuisine is by far the most common, with over 9,000 
 
 In addition to analyzing one variable at a time, I looked at relationships between two columns. Specifically, I grouped the data by cuisine and calculated the average for all of the nutrition metrics: calories, total fat, sugar, sodium, protein, saturated fat, and carbohydrates. These were then visualized using bar charts to help identify how different cuisines compare in terms of their typical nutritional profiles. This analysis was done to provide a more nuanced view of each cuisine's general nutritional characteristics and determine the health considerations of each cuisine. I decided to display the bar charts comparing the average values of calories, sodium, sugar, and protein.
 
-**Calories**: This chart shows that Thai, Italian, and French cuisines have the highest average calorie counts among all cuisines analyzed, while Canadian, Australian, and Indian cuisines tend to be the lowest. Interestingly, some commonly perceived "heavier" cuisines like American and Mexican fall closer to the middle of the range, rather than the top.
+**Calories**: This chart shows that Thai and Italian cuisines have the highest average calorie counts among all cuisines analyzed, while Canadian, Australian, and Indian cuisines tend to be the lowest. Interestingly, some commonly perceived "heavier" cuisines like American and Mexican fall closer to the middle of the range, rather than the top. This suggests that for those aiming to reduce calorie intake, it may be wise to limit dishes from Thai and Italian cuisines, or focus on lighter options within those categories.
 
 
 <iframe
@@ -110,7 +110,15 @@ In addition to analyzing one variable at a time, I looked at relationships betwe
  ></iframe>
 
 
+**Sugar**: This chart shows that Caribbean and Thai cuisines have the highest average sugar content, both having an average of around 70g of sugar, while every other cuisine has a sugar content of less than 62g. For those looking to reduce sugar intake, it might be helpful to limit dishes from these two sweeter cuisines. Italian, Mexican, and Greek cuisines appear to have the lowest sugar levels of around 30g.
 
+
+<iframe
+ src="assets/sugar-per-cuisine.html"
+ width="1000"
+ height="400"
+ frameborder="0"
+ ></iframe>
 
 
 

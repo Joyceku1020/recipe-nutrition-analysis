@@ -121,6 +121,13 @@ In addition to analyzing one variable at a time, I looked at relationships betwe
 
 **Sodium**: The chart shows that Thai, Japanese, and Chinese cuisines have the highest average sodium content. It is interesting to note that these are all Asian cuisines, suggesting a trend where Asian cuisines may generally have higher sodium levels compared to others. For those looking to reduce sodium intake, it might be helpful to limit dishes from these high-sodium cuisines or opt for recipes with less added salt. In contrast, Canadian, Indian, and Australian cuisines have the lowest sodium levels.
 
+<iframe
+ src="assets/sodium-per-cuisine.html"
+ width="1000"
+ height="400"
+ frameborder="0"
+ ></iframe>
+
 
 **Saturated Fat**: French, Thai, Scandinavian, and Italian cuisines have the highest saturated fat levels. Since a high intake of saturated fats can lead to various health levels, it is advised to avoid cuisines with high saturated fat content. Chinese, Middle Eastern, and Japanese cuisines have the lowest saturated fat levels. 
 

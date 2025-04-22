@@ -81,7 +81,6 @@ I first examined the distribution of calories across all recipes. The histogram 
 The plot reveals that most recipes fall under 1,000 calories, with a noticeable peak between 100 to 300 calories. The distribution is right-skewed, eamning there are more low-calorie recipes and fewer high-calorie ones, even after removing the extreme outliers. 
 
 
-
 I also explored the most common cuisine tags in the recipes, excluding any overlapping categories. I gathered all of the cuisines from the top 300 most used tags. To keep the analysis more meaningful, I removed broad labels like "European," since they often contain more specific regional cuisines. On the other hand, I chose to keep "American" as a single category, combining its regional variations due to their overall similarity. The bar chart below shows the number of recipies per cuisine:
 
 
@@ -144,10 +143,23 @@ After looking at the calories, sugar, sodium, and saturated fat in each cuisine,
 
 ### Interesting Aggregates
 
+To better understand how recipe complexity might relate to nutritional content, I created ingredient bins based on the number of ingredients in each recipe. 
+
+| ingredient_bin   |   calories |
+|:-----------------|-----------:|
+| 0-5              |    283.467 |
+| 6-10             |    352.801 |
+| 11-15            |    425.785 |
+| 16-20            |    523.43  |
+| 21-25            |    609.056 |
+| 26-30            |    643.07  |
+| 31+              |    710.764 |
+
+From this table, it's clear that as the number of ingredients in a recipe increases, so does the average calorie content. This suggests that more complex recipes, which require more ingredients, are generally higher in calories compared to simpler ones. This could be due to the inclusion of higher-calorie ingredients, such as oils, sauces, or fats, as complexity increases. It helps highlight the potential for more intricate recipes with more ingredients to be less health-conscious in terms of calorie density, making it useful for consumers who are mindful of their caloric intake.
 
 ### Imputation
 
-
+I didn’t perform imputation because the only column with missing data was avg_rating, which is missing when a recipe hasn’t been rated by any users. Since it makes sense for these values to be empty and there's no meaningful way to infer a rating that doesn’t exist, I chose not to apply any imputation.
 
 
 ## Framing a Prediction Problem

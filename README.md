@@ -101,7 +101,6 @@ In addition to analyzing one variable at a time, I looked at relationships betwe
 
 **Calories**: This chart shows that Thai and Italian cuisines have the highest average calorie counts among all cuisines analyzed, while Canadian, Australian, and Indian cuisines tend to be the lowest. Interestingly, some commonly perceived "heavier" cuisines like American and Mexican fall closer to the middle of the range, rather than the top. This suggests that for those aiming to reduce calorie intake, it may be wise to limit dishes from Thai and Italian cuisines, or focus on lighter options within those categories.
 
-
 <iframe
  src="assets/calories-per-cuisine.html"
  width="1000"
@@ -112,7 +111,6 @@ In addition to analyzing one variable at a time, I looked at relationships betwe
 
 **Sugar**: This chart shows that Caribbean and Thai cuisines have the highest average sugar content, both having an average of around 70g of sugar, while every other cuisine has a sugar content of less than 62g. For those looking to reduce sugar intake, it might be helpful to limit dishes from these two sweeter cuisines. Italian, Mexican, and Greek cuisines appear to have the lowest sugar levels of around 30g.
 
-
 <iframe
  src="assets/sugar-per-cuisine.html"
  width="1000"
@@ -120,6 +118,21 @@ In addition to analyzing one variable at a time, I looked at relationships betwe
  frameborder="0"
  ></iframe>
 
+
+**Sodium**: The chart shows that Thai, Japanese, and Chinese cuisines have the highest average sodium content. It is interesting to note that these are all Asian cuisines, suggesting a trend where Asian cuisines may generally have higher sodium levels compared to others. For those looking to reduce sodium intake, it might be helpful to limit dishes from these high-sodium cuisines or opt for recipes with less added salt. In contrast, Canadian, Indian, and Australian cuisines have the lowest sodium levels.
+
+
+**Saturated Fat**: French, Thai, Scandinavian, and Italian cuisines have the highest saturated fat levels. Since a high intake of saturated fats can lead to various health levels, it is advised to avoid cuisines with high saturated fat content. Chinese, Middle Eastern, and Japanese cuisines have the lowest saturated fat levels. 
+
+<iframe
+ src="assets/saturated-fat-per-cuisine.html"
+ width="1000"
+ height="400"
+ frameborder="0"
+ ></iframe>
+
+
+After looking at the calories, sugar, sodium, and saturated fat in each cuisine, I found that Middle Eastern cuisine generally has the lowest amounts of all these factors, making it one of the healthier options overall.
 
 
 ### Interesting Aggregates

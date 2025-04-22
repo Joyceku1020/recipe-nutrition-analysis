@@ -184,11 +184,12 @@ I will evaluate model performance using **Mean Squared Error (MSE)** This metric
 ## Baseline Model
 ---
 
-To build my baseline model, I used a linear regression pipeline that processes both numerical and categorical data. I first separated out the target variable, calories, and split the dataset into training and testing sets. All numeric features—like total fat, sugar, sodium, protein, saturated fat, carbohydrates, number of ingredients, and number of steps—were standardized so that the model could treat them equally regardless of scale. For the categorical feature, cuisine tags were one-hot encoded to ensure they could be used effectively in the regression model.
+To build my baseline model, I used a linear regression pipeline that processes both numerical and categorical data. I first separated out the target variable, calories, and split the dataset into training and testing sets. I reserved 20% of my data for testing and used the remaining 80% for training. All numeric features—like total fat, sugar, sodium, protein, saturated fat, carbohydrates, number of ingredients, and number of steps—were standardized so that the model could treat them equally regardless of scale. For the categorical feature, cuisine tags were one-hot encoded to ensure they could be used effectively in the regression model.
 
-Once the pipeline was set up, I trained the model on the training data and then evaluated its performance using **Mean Squared Error (MSE)**. This metric measures the average squared difference between predicted and actual calorie values, meaning larger mistakes have a bigger impact. MSE is helpful for capturing whether the model tends to miss the mark in extreme ways. The resulting MSE gives me a benchmark for how well a basic linear model can perform on this task, which I’ll use to judge more advanced models moving forward.
+These are the results I got after evaluating:
 
-`Baseline MSE: 816.06 calories^2`
+`Baseline MSE: 816.06`
+
 `Baseline R²: 0.9908`
 
 
@@ -196,5 +197,30 @@ The baseline linear regression model achieved a Mean Squared Error (MSE) of 816.
 
 An R² score of 0.9908 means that the model is able to explain over 99% of the variance in the calorie data. This high value suggests a strong linear relationship between the input features—nutritional components, ingredient and step counts, and the cuisine type—and the target variable. While promising, such a high R² might also hint at potential overfitting or the presence of highly predictive features (like macronutrients) that dominate the prediction. These results set a strong baseline and will be helpful for evaluating the value of more complex models later in the process.
 
+Given these metrics, I would consider the baseline model to be “good” in terms of predictive accuracy and explanatory power. However, the extremely high R² also raises questions about whether the model may be overfitting to the training data or benefiting disproportionately from a few dominant features (e.g., total fat or carbohydrates). To assess this further, I plan to evaluate the model’s generalization ability on other datasets and compare it with more complex models. 
+
 ## Final Model
 ---
+
+To improve upon the baseline linear regression model, I engineered two new features that incorporate more nuanced nutritional information and reflect real-world eating patterns:
+
+sugar_per_step: This feature divides the sugar content by the number of recipe steps. The rationale behind this feature is that it captures how concentrated sugar is per unit of effort or complexity. Simpler recipes with high sugar content (like desserts or sugary drinks) often lead to high calorie counts, and this ratio helps the model account for that dynamic.
+
+carb_to_protein: This feature calculates the ratio of carbohydrates to protein in a dish. I added this to capture the macronutrient balance, which plays a major role in determining calorie content. Meals that are heavy in carbs but low in protein—such as baked goods or starchy dishes—often have higher caloric density. By giving the model this ratio, it can more easily distinguish between lean, protein-dominant meals and calorie-dense carbohydrate-heavy meals.
+
+I used these features in addition to the original numerical and categorical variables (standardizing continuous features and one-hot encoding cuisine). I also switched to a **Random Forest Regressor** for my final model to better capture non-linear relationships that a simple linear regression might miss. Random forests are well-suited for handling mixed data types and capturing interactions between features like macronutrient composition and cuisine type.
+
+To optimize the RandomForestRegressor, I performed hyperparameter tuning using GridSearchCV. I focused on three key parameters:
+- `n_estimators`: The number of trees (set to 50)
+- `max_depth`: The maximum depth of the trees (tested with 10 and 20)
+- `min_samples_split`: Minimum samples required to split a node (tested with 2 and 5)
+
+The best parameters found were {`n_estimators`: 50, `max_depth`: 20, `min_samples_split`: 2}
+
+With these settings, the final model achieved:
+
+`Final MSE: 900.06`
+
+`Final R²: 0.9899`
+
+Although the final model's MSE is higher (indicating worse performance) and its R² slightly decreased compared to the baseline, it still explains a very high proportion of the variance in the target variable (calories). The model's R² of 0.9899 still indicates strong predictive power. In conclusion, the final model did not significantly outperform the baseline but benefited from feature engineering and hyperparameter tuning. The new features (sugar_per_step and carb_to_protein) provided relevant information, though they did not drastically improve the model.
